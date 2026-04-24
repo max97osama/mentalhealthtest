@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/navbar'
 import { conditionData, ConditionInfo } from '@/data/conditions'
 
 type Props = { condition: ConditionInfo }
