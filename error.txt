@@ -1,0 +1,31 @@
+
+> mental-health-test@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Linting and checking validity of types ...
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Collecting page data ...
+   Generating static pages (0/4) ...
+   Generating static pages (1/4) 
+   Generating static pages (2/4) 
+   Generating static pages (3/4) 
+ ✓ Generating static pages (4/4)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (pages)                             Size     First Load JS
+┌ ○ / (1997 ms)                           12.9 kB        95.4 kB
+├   /_app                                 0 B            79.9 kB
+├ ○ /404                                  180 B          80.1 kB
+└ ○ /test                                 5.32 kB        87.8 kB
++ First Load JS shared by all             82.6 kB
+  ├ chunks/framework-64ad27b21261a9ce.js  44.8 kB
+  ├ chunks/main-4b423ec82b590a3f.js       34 kB
+  └ other shared chunks (total)           3.74 kB
+
+○  (Static)  prerendered as static content
+
