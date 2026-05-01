@@ -137,28 +137,6 @@ export default function ResultsPage({ result }: Props) {
           })}
         </div>
 
-        {result.verdict === 'danger' && (
-          <div style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '14px', padding: '28px 24px', marginBottom: '40px' }}>
-            <h3 style={{ fontFamily: 'Playfair Display, serif', color: '#ef4444', marginBottom: '14px', fontSize: '1.2rem' }}>
-              🆘 Immediate Help Resources
-            </h3>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <li style={{ fontSize: '0.9rem', color: '#9d8fc0' }}>
-                🌍 <strong style={{ color: '#e8e0f5' }}>International Association for Suicide Prevention:</strong> https://www.iasp.info/resources/Crisis_Centres/
-              </li>
-              <li style={{ fontSize: '0.9rem', color: '#9d8fc0' }}>
-                🇺🇸 <strong style={{ color: '#e8e0f5' }}>US Crisis Line:</strong> Call or text 988
-              </li>
-              <li style={{ fontSize: '0.9rem', color: '#9d8fc0' }}>
-                🇬🇧 <strong style={{ color: '#e8e0f5' }}>UK Samaritans:</strong> 116 123
-              </li>
-              <li style={{ fontSize: '0.9rem', color: '#9d8fc0' }}>
-                🇪🇬 <strong style={{ color: '#e8e0f5' }}>Egypt Mental Health Hotline:</strong> 08008880700
-              </li>
-            </ul>
-          </div>
-        )}
-
         <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link href="/test" className="btn-outline">Retake Test</Link>
           <Link href="/conditions" className="btn-primary">Explore Conditions</Link>

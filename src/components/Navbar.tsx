@@ -13,17 +13,18 @@ export default function Navbar({ lang = 'en' }: Props) {
     <nav
       dir={isAr ? 'rtl' : 'ltr'}
       style={{
-        background: 'rgba(10,10,15,0.85)',
+        background: 'rgba(10,10,15,0.95)',
         backdropFilter: 'blur(12px)',
         borderBottom: '1px solid #2a2a3d',
         position: 'sticky',
         top: 0,
         zIndex: 50,
-        padding: '0 24px',
-        height: '64px',
+        padding: '12px 24px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        gap: '12px',
       }}
     >
       <Link
@@ -31,16 +32,16 @@ export default function Navbar({ lang = 'en' }: Props) {
         style={{
           fontFamily: 'Playfair Display, serif',
           fontWeight: 700,
-          fontSize: '1.2rem',
+          fontSize: '1.1rem',
           color: '#a78bfa',
           textDecoration: 'none',
-          letterSpacing: '-0.01em',
+          flexShrink: 0,
         }}
       >
         {isAr ? 'اختبار الصحة النفسية' : 'MindCheck'}
       </Link>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '28px', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
         <Link href={base + '/'} style={linkStyle(router.pathname === base + '/' || router.pathname === '/')}>
           {isAr ? 'الرئيسية' : 'Home'}
         </Link>
@@ -53,13 +54,14 @@ export default function Navbar({ lang = 'en' }: Props) {
         <Link
           href={opposite}
           style={{
-            fontSize: '0.85rem',
+            fontSize: '0.82rem',
             color: '#9d8fc0',
             textDecoration: 'none',
             border: '1px solid #2a2a3d',
             borderRadius: '6px',
-            padding: '4px 12px',
-            transition: 'all 0.2s',
+            padding: '5px 12px',
+            whiteSpace: 'nowrap',
+            flexShrink: 0,
           }}
         >
           {isAr ? 'EN' : 'عربي'}
@@ -73,10 +75,11 @@ function linkStyle(active: boolean): React.CSSProperties {
   return {
     color: active ? '#c4b5fd' : '#9d8fc0',
     textDecoration: 'none',
-    fontSize: '0.9rem',
+    fontSize: '0.88rem',
     fontWeight: active ? 600 : 400,
     borderBottom: active ? '2px solid #8b5cf6' : '2px solid transparent',
     paddingBottom: '2px',
-    transition: 'all 0.2s',
+    whiteSpace: 'nowrap',
+    flexShrink: 0,
   }
 }
